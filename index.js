@@ -1,11 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
+import cors from "cors";
 import dotenv from "dotenv";
 import route from "./routes/useRoute.js";
 dotenv.config();
-const app = express();
 
+const app = express();
+app.use(cors()); 
 app.use(express.json());
 
 
